@@ -1,8 +1,13 @@
-(function (root) {
+//(function (root) {
+
+  /* global Components */
+  var hdw = Components.classes['@mozilla.org/appshell/appShellService;1']
+    .getService(Components.interfaces.nsIAppShellService).hiddenDOMWindow;
 
   // Store setTimeout reference so promise-polyfill will be unaffected by
   // other code modifying setTimeout (like sinon.useFakeTimers())
-  var setTimeoutFunc = setTimeout;
+  //var setTimeoutFunc = setTimeout;
+  var setTimeoutFunc = hdw.setTimeout;
 
   function noop() {
   }
@@ -14,7 +19,8 @@
     };
 
   var onUnhandledRejection = function onUnhandledRejection(err) {
-    console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
+    //console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
+    hdw.console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
   };
 
   // Polyfill for Function.prototype.bind
@@ -227,4 +233,4 @@
     root.Promise = Promise;
   }
 
-})(this);
+//})(this);

@@ -1,22 +1,22 @@
 {
-  "name": "promise-polyfill",
-  "version": "4.0.1",
-  "description": "Lightweight promise polyfill. A+ compliant",
-  "main": "Promise.js",
+  "name": "imacros-promise-polyfill",
+  "version": "1.0.1",
+  "description": "Lightweight promise polyfill for iMacros. A+ compliant",
+  "main": "promise.js",
   "scripts": {
     "test": "eslint promise.js && mocha && karma start --single-run",
     "build": "uglifyjs --compress --mangle -o promise.min.js -- promise.js "
   },
   "repository": {
     "type": "git",
-    "url": "https://taylorhakes@github.com/taylorhakes/promise-polyfill.git"
+    "url": "https://cyxou@github.com/cyxou/imacros-promise-polyfill.git"
   },
-  "author": "Taylor Hakes",
+  "author": "Alex Sukhov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taylorhakes/promise-polyfill/issues"
+    "url": "https://github.com/cyxou/imacros-promise-polyfill/issues"
   },
-  "homepage": "https://github.com/taylorhakes/promise-polyfill",
+  "homepage": "https://github.com/cyxou/imacros-promise-polyfill",
   "devDependencies": {
     "eslint": "^2.4.0",
     "karma": "^0.13.19",
@@ -32,7 +32,8 @@
     "promise",
     "promise-polyfill",
     "ES6",
-    "promises-aplus"
+    "promises-aplus",
+    "imacros"
   ],
   "dependencies": {}
 }
